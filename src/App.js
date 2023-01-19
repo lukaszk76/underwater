@@ -116,13 +116,6 @@ function App() {
                 do you want to buy or rent diving equipment?
               </div>
             </Card>
-
-            <Card>
-              <h4>And many more </h4>
-              <div className="card-content">
-                we can help you with everything you need as a diver
-              </div>
-            </Card>
           </div>
         </ParallaxLayer>
       </Parallax>

@@ -52,19 +52,20 @@
 }
 
 .hero {
-  top: 3vh;
+  top: 20px;
   display: flex;
   gap: 50px;
   justify-content: left;
   flex-direction: row;
-  padding: 20px 50px 5px 50px;
+  padding: 10px 30px 0px 30px;
   margin: 40px 70px 10px 70px;
   border-radius: 10px;
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
   background-image: url('./assets/logo-background.png');
   background-size: contain;
   mask-image: url(./assets/logo.png);
@@ -78,7 +79,7 @@
 
 .main-title {
   margin-left: 50px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--background);
   font-family: poppins;
   font-weight: 600;
@@ -117,8 +118,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  right: calc(var(--xcorrection) + (0.05 * var(--backgroundWidth)));
-  top: 20vh;
+  right: 10vw;
+  top: 25vh;
+  max-height: 160vh;
+  overflow-y:  auto;
+  overflow-x: hidden;
+}
+
+.cards::-webkit-scrollbar {
+  background: transparent;
 }
 
 .footer {

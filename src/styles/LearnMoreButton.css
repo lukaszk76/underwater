@@ -1,0 +1,10 @@
+.learn-more-button {
+  font-weight: 700;
+  overflow: visible;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+text, rect, line, polyline {
+  transition: all 0.3s ease-in-out;
+}

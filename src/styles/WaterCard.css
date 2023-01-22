@@ -1,0 +1,62 @@
+.glass {
+  background-image: radial-gradient( rgba(23, 78, 99, 0.3), transparent);
+  /*rgba(106, 92, 92, 0.05)*/
+  box-shadow: 0 8px 20px 0 var(--verdigris);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--verdigris);
+}
+
+.water-card {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  transition: all 3s ease-in-out;
+  animation-name: water-card-animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+}
+
+.water-card-content {
+  font-size: 1.2rem;
+  color: var(--pale);
+  transition: all 0.5s ease-in-out;
+}
+.water-card-content:hover {
+  font-size: 1.3rem;
+  color: var(--buff);
+}
+
+@keyframes water-card-animation {
+  0% {
+    -webkit-clip-path: ellipse(50% 49% at 50% 50%);
+    clip-path: ellipse(50% 49% at 50% 50%);
+    transform: rotate(0) scale(1);
+  }
+  25% {
+    -webkit-clip-path: ellipse(49% 50% at 50% 50%);
+    clip-path: ellipse(49% 50% at 50% 50%);
+    transform: rotate(1deg) scale(1.03);
+  }
+  50% {
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+    clip-path: ellipse(50% 50% at 50% 50%);
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    -webkit-clip-path: ellipse(49% 50% at 50% 50%);
+    clip-path: ellipse(49% 50% at 50% 50%);
+    transform: rotate(-1deg) scale(1.03);
+  }
+  100% {
+    -webkit-clip-path: ellipse(50% 49% at 50% 50%);
+    clip-path: ellipse(50% 49% at 50% 50%);
+    transform: rotate(0) scale(1);
+  }
+}

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'poppins';
+  src: url('../assets/Poppins-Regular.ttf');
+}
+:root {
+  --background: #0c2434;
+  --parallax-background: var(--rufous);
+  --sea: #174e63;
+  --pale: #E6F4F1;
+
+  --indigo-dye: #004777ff;
+  --rufous: #a30000ff;
+  --safety-orange: #ff7700ff;
+  --buff: #efd28dff;
+  --verdigris: #00afb5ff;
+
+  --indigo-dye-gradient: linear-gradient(to left, var(--indigo-dye), 99.5%, var(--background));
+  --rufous-gradient: linear-gradient(to left, var(--rufous), 99.5%, var(--rufous));
+  --safety-orange-gradient: linear-gradient(to left, var(--safety-orange), 99.5%, var(--buff));
+  --buff-gradient: linear-gradient(to left, var(--buff), 99.5%, var(--verdigris));
+  --verdigris-gradient: linear-gradient(to left, var(--verdigris), 99.5%, var(--sea));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var( --pale);
+  cursor: none;
+  height: 300vh;
+}
+
+h4 {
+  color: var(--safety-orange);
+}
+

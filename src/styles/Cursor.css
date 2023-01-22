@@ -1,0 +1,22 @@
+.cursor-pointer {
+  z-index: 9999;
+  position: absolute;
+  background: var(--verdigris);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  opacity: 0.6;
+  border: solid 2px var(--safety-orange);
+  pointer-events: none;
+  box-shadow: 0 0 20px var(--safety-orange), 0 0 60px var(--safety-orange),
+  0 0 100px var(--safety-orange);
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.cursor-pointer:before {
+  content: "";
+  position: absolute;
+  background: var(--safety-orange);
+  opacity: 0.05;
+  border-radius: 50%;
+}

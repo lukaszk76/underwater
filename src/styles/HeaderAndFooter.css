@@ -36,6 +36,8 @@
   align-items: center;
   padding: 10px 50px 10px 50px;
   font-size: 1rem;
+  border: none;
+  box-shadow: none;
 }
 
 .footer-content {

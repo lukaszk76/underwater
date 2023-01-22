@@ -1,63 +1,70 @@
-import React, { useCallback, useEffect, useState, useContext } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+  useContext,
+  useLayoutEffect,
+} from "react";
 import { Link } from "./Link";
 import { Context } from "./ContextProvider";
 
 export const Menu = () => {
-  const [variant, setVariant] = useState(1);
   const { sections } = useContext(Context);
 
-  const toggleVariant = useCallback(() => {
+  const expandMenu = useCallback(() => {
     const rect1 = document.getElementById(`menu-rect`);
     const rect2 = document.getElementById(`menu-rect-2`);
     const line = document.getElementById(`menu-line`);
     const polyline = document.getElementById(`menu-polyline`);
-    const text = document.getElementById(`menu-text`);
     const links = document.querySelectorAll(".menu-link");
     const menuWrapper = document.querySelector(`.menu-wrapper`);
-    const rect1Width = ["60px", "220px"];
-    const rect2Width = ["220px", "1250px"];
-    const transformX = [0, 14];
-    const lineX2 = [38, 3];
-    const textDisplay = ["block", "block"];
-    const linkOpacity = ["0", "1"];
 
-    const delay = variant ? 0 : links.length * 50;
-
-    setTimeout(() => {
-      rect1.style.width = rect1Width[variant];
-      rect2.style.width = rect2Width[variant];
-      menuWrapper.style.width = rect2Width[variant];
-      line.style.transform = `translateX(${transformX[variant]}px)`;
-      line.setAttribute("x2", `${lineX2[variant]}`);
-      polyline.style.transform = `translateX(${transformX[variant]}px)`;
-      text.style.display = textDisplay[variant];
-    }, delay);
+    rect1.style.width = "220px";
+    rect2.style.width = "1250px";
+    menuWrapper.style.width = "1250px";
+    line.style.transform = `translateX(14px)`;
+    line.setAttribute("x2", `3`);
+    polyline.style.transform = `translateX(14px)`;
 
     links.forEach((link, index) => {
-      const delay = variant ? index * 50 : (links.length - index - 1) * 50;
       setTimeout(() => {
-        link.style.opacity = linkOpacity[variant];
-      }, delay);
+        link.style.opacity = "1";
+      }, index * 50);
     });
+  }, []);
 
-    if (variant === 0) {
-      setVariant(1);
-    } else {
-      setVariant(0);
-    }
-  }, [variant]);
+  const hideMenu = useCallback(() => {
+    setTimeout(() => {
+      const rect1 = document.getElementById(`menu-rect`);
+      const rect2 = document.getElementById(`menu-rect-2`);
+      const line = document.getElementById(`menu-line`);
+      const polyline = document.getElementById(`menu-polyline`);
+      const links = document.querySelectorAll(".menu-link");
+      const menuWrapper = document.querySelector(`.menu-wrapper`);
+
+      rect1.style.width = "60px";
+      rect2.style.width = "220px";
+      menuWrapper.style.width = "220px";
+      line.style.transform = `translateX(0px)`;
+      line.setAttribute("x2", `38`);
+      polyline.style.transform = `translateX(0px)`;
+
+      links.forEach((link, index) => {
+        setTimeout(() => {
+          link.style.opacity = "0";
+        }, (links.length - index - 1) * 50);
+      });
+    }, 300);
+  }, []);
 
   useEffect(() => {
     const menuWrapper = document.querySelector(`.menu-wrapper`);
     if (!menuWrapper) return;
 
-    menuWrapper.addEventListener("mouseenter", toggleVariant);
-    menuWrapper.addEventListener("mouseleave", toggleVariant);
-    return () => {
-      menuWrapper.removeEventListener("mouseenter", toggleVariant);
-      menuWrapper.removeEventListener("mouseleave", toggleVariant);
-    };
-  }, [toggleVariant]);
+    menuWrapper.addEventListener("mouseenter", expandMenu);
+    menuWrapper.addEventListener("mouseleave", hideMenu);
+    console.log("menuWrapper", menuWrapper);
+  }, [expandMenu, hideMenu]);
 
   return (
     <div className={"menu-wrapper glass"}>

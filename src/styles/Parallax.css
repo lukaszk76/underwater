@@ -48,7 +48,7 @@
 .fish {
   position: absolute;
   left: calc(0.4 * var(--backgroundWidth));
-  top: 70vh;
+  top: 30vh;
   opacity: 0.6;
   transform: rotate(40deg) scale(0.7);
   z-index: 30;
@@ -57,7 +57,7 @@
 .diver
 {
   position: absolute;
-  left: calc(0.1 * var(--backgroundWidth));
+  left: calc(0.2 * var(--backgroundWidth));
   top: -40vh;
   transform: scale(0.55);
   z-index: 50;

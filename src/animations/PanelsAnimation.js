@@ -18,6 +18,17 @@ export const PanelsAnimation = () => {
     } else {
       context.setSection(() => context.sections.DIVING_EQUIPMENT);
     }
+
+    if (progress < 0.1) {
+      context.setTop(true);
+    } else {
+      context.setTop(false);
+    }
+    if (progress > 0.9) {
+      context.setBottom(true);
+    } else {
+      context.setBottom(false);
+    }
   };
 
   useLayoutEffect(() => {

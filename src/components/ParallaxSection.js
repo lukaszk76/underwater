@@ -95,10 +95,10 @@ const ParallaxSection = () => {
         />
       </div>
       <div className="parallax-layer" data-speed="0.2">
-        <WaterCard style={{ top: "15vh", left: "50vw" }}>about us</WaterCard>
+        <WaterCard style={{ top: "15vh", left: "35vw" }}>about us</WaterCard>
         <WaterCard style={{ top: "30vh", left: "10vw" }}>contact</WaterCard>
         <WaterCard style={{ top: "70vh", left: "45vw" }}>blog</WaterCard>
-        <WaterCard style={{ top: "115vh", left: "48vw" }}>events</WaterCard>
+        <WaterCard style={{ top: "110vh", left: "37vw" }}>events</WaterCard>
       </div>
     </div>
   );

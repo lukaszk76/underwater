@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-export const LearnMoreButton = ({ id }) => {
+export const LearnMoreButton = ({ section }) => {
   const [variant, setVariant] = useState(1);
 
   const toggleVariant = useCallback(() => {
@@ -8,10 +8,14 @@ export const LearnMoreButton = ({ id }) => {
     const transformX = [0, 14];
     const lineX2 = [38, 3];
 
-    const rect = document.getElementById(`learn-more-button-rect-${id}`);
-    const line = document.getElementById(`learn-more-button-line-${id}`);
+    const rect = document.getElementById(
+      `learn-more-button-rect-${section.short}`
+    );
+    const line = document.getElementById(
+      `learn-more-button-line-${section.short}`
+    );
     const polyline = document.getElementById(
-      `learn-more-button-polyline-${id}`
+      `learn-more-button-polyline-${section.short}`
     );
 
     rect.style.width = `${rectWidth[variant]}px`;
@@ -23,30 +27,32 @@ export const LearnMoreButton = ({ id }) => {
     } else {
       setVariant(0);
     }
-  }, [id, variant]);
+  }, [section.short, variant]);
 
   useEffect(() => {
-    const button = document.getElementById(`learn-more-button-${id}`);
+    const button = document.getElementById(
+      `learn-more-button-${section.short}`
+    );
     if (!button) return;
     button.addEventListener("mouseenter", toggleVariant);
     button.addEventListener("mouseleave", toggleVariant);
-  }, [id, toggleVariant]);
+  }, [section.short, toggleVariant]);
 
   const handleClick = () => {
-    console.log(`clicked learn more button ${id}`);
+    console.log(`clicked learn more button ${section.short}`);
   };
 
   return (
     <svg
       className={`learn-more-button`}
-      id={`learn-more-button-${id}`}
+      id={`learn-more-button-${section.short}`}
       width="220"
       height="60"
       viewBox="0 0 220 60"
       onClick={handleClick}
     >
       <rect
-        id={`learn-more-button-rect-${id}`}
+        id={`learn-more-button-rect-${section.short}`}
         x="0"
         y="0"
         width="60"
@@ -67,16 +73,16 @@ export const LearnMoreButton = ({ id }) => {
         strokeWidth="2"
       />
       <text
-        id={`learn-more-button-text-${id}`}
+        id={`learn-more-button-text-${section.short}`}
         transform="translate(130 38)"
         textAnchor="middle"
         fontSize="20"
-        fill="var(--pale)"
+        fill={`var(--${section.textColor})`}
       >
         LEARN MORE
       </text>
       <line
-        id={`learn-more-button-line-${id}`}
+        id={`learn-more-button-line-${section.short}`}
         x1="38"
         y1="30"
         x2="38"
@@ -87,7 +93,7 @@ export const LearnMoreButton = ({ id }) => {
         strokeLinejoin="round"
       />
       <polyline
-        id={`learn-more-button-polyline-${id}`}
+        id={`learn-more-button-polyline-${section.short}`}
         points="27 20 38 30 27 40"
         fill="none"
         strokeLinecap="round"

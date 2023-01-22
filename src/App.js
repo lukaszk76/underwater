@@ -6,7 +6,6 @@ import "./styles/LearnMoreButton.css";
 import "./styles/Cursor.css";
 import "./styles/Menu.css";
 import Cursor from "./components/Cursor";
-import Header from "./components/Header";
 import ParallaxSection from "./components/ParallaxSection";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";

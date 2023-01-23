@@ -63,7 +63,7 @@ export const Link = ({ section, index }) => {
         height="30"
         rx="15"
         ry="15"
-        stroke={`var(--background)`}
+        stroke={`var(--${section.color})`}
         fill={"rgba(12, 36, 52, 0.2)"}
         strokeWidth="2"
       />

@@ -1,5 +1,5 @@
 .glass {
-  background-image: radial-gradient( rgba(23, 78, 99, 0.3), transparent);
+  background-image: radial-gradient(rgba(23, 78, 99, 0.3), transparent);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -19,24 +19,23 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   border: 1px solid var(--verdigris);
-
 }
 
 .water-card-content {
-  font-size: 1.2rem;
-  color: var(--pale);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--buff);
   transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
-
 }
 
 .water-card-underline {
   background-color: var(--rufous);
-  width: 10px;
-  height: 4px;
-  border-radius: 2px;
+  width: 20px;
+  height: 6px;
+  border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -44,26 +43,26 @@
   0% {
     -webkit-clip-path: ellipse(50% 49% at 50% 50%);
     clip-path: ellipse(50% 49% at 50% 50%);
-    transform: rotate(0) scale(1);
+    transform: rotate(0);
   }
   25% {
     -webkit-clip-path: ellipse(49% 50% at 50% 50%);
     clip-path: ellipse(49% 50% at 50% 50%);
-    transform: rotate(1deg) scale(1.03);
+    transform: rotate(1deg);
   }
   50% {
     -webkit-clip-path: ellipse(50% 50% at 50% 50%);
     clip-path: ellipse(50% 50% at 50% 50%);
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
   75% {
     -webkit-clip-path: ellipse(49% 50% at 50% 50%);
     clip-path: ellipse(49% 50% at 50% 50%);
-    transform: rotate(-1deg) scale(1.03);
+    transform: rotate(-1deg);
   }
   100% {
     -webkit-clip-path: ellipse(50% 49% at 50% 50%);
     clip-path: ellipse(50% 49% at 50% 50%);
-    transform: rotate(0) scale(1);
+    transform: rotate(0);
   }
 }

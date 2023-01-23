@@ -13,7 +13,7 @@ export const sections = {
     short: "Trips",
     name: "Diving Trips",
     color: "rufous",
-    accentColor: "indigo-dye",
+    accentColor: "verdigris",
     textColor: "pale",
     description: "vist with us the most exciting diving places in the world",
   },

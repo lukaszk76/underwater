@@ -5,12 +5,17 @@ export const WaterCard = ({ children, style }) => {
     const bubbles = document.querySelectorAll(".water-card");
     bubbles.forEach((bubble) => {
       bubble.addEventListener("mouseenter", (e) => {
-        e.target.querySelector(".water-card-underline").style.width = "40px";
+        const { width } = e.target
+          .querySelector(".water-card-content")
+          .getBoundingClientRect();
+        e.target.querySelector(
+          ".water-card-underline"
+        ).style.width = `${width}px`;
         e.target.style.backgroundImage =
           "radial-gradient( rgba(23, 78, 99, 0.6), transparent)";
       });
       bubble.addEventListener("mouseleave", (e) => {
-        e.target.querySelector(".water-card-underline").style.width = "10px";
+        e.target.querySelector(".water-card-underline").style.width = "20px";
         e.target.style.backgroundImage =
           "radial-gradient( rgba(23, 78, 99, 0.3), transparent)";
       });

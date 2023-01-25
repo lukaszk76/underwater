@@ -1,7 +1,7 @@
-import React, { useLayoutEffect } from "react";
+import React, { memo, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-export const ParallaxAnimation = ({ timeline }) => {
+const ParallaxAnimation = ({ timeline }) => {
   useLayoutEffect(() => {
     if (!timeline) return;
     gsap.registerPlugin(ScrollTrigger);
@@ -21,3 +21,5 @@ export const ParallaxAnimation = ({ timeline }) => {
   }, [timeline]);
   return <></>;
 };
+
+export default memo(ParallaxAnimation);

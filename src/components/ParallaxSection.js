@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useContext } from "react";
+import React, { useCallback, useEffect, useContext, memo } from "react";
 import background from "../assets/underwater.png";
 import fish from "../assets/fish.png";
 import creature from "../assets/creature.png";
@@ -6,7 +6,7 @@ import diver from "../assets/diver.png";
 import "@lottiefiles/lottie-player";
 import water3 from "../assets/water3.mp4";
 import water1 from "../assets/water1.mp4";
-import { WaterCard } from "./WaterCard";
+import WaterCard from "./WaterCard";
 import { Context } from "../components/ContextProvider";
 
 const ParallaxSection = () => {
@@ -104,4 +104,4 @@ const ParallaxSection = () => {
   );
 };
 
-export default ParallaxSection;
+export default memo(ParallaxSection);

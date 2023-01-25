@@ -1,6 +1,6 @@
-import React, { useLayoutEffect } from "react";
+import React, { memo, useLayoutEffect } from "react";
 
-export const CreatureAnimation = ({ timeline }) => {
+const CreatureAnimation = ({ timeline }) => {
   useLayoutEffect(() => {
     if (!timeline) return;
     timeline.to(
@@ -31,3 +31,5 @@ export const CreatureAnimation = ({ timeline }) => {
   }, [timeline]);
   return <></>;
 };
+
+export default memo(CreatureAnimation);

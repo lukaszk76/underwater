@@ -1,14 +1,15 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { memo, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ParallaxAnimation } from "./ParallaxAnimation";
-import { DiverAnimation } from "./DiverAnimation";
-import { FishAnimation } from "./FishAnimation";
-import { CreatureAnimation } from "./CreatureAnimation";
-import { PanelsAnimation } from "./PanelsAnimation";
-import { ScrollDownAnimation } from "./ScrollDownAnimation";
-export const AnimationProvider = ({ children }) => {
+import ParallaxAnimation from "./ParallaxAnimation";
+import DiverAnimation from "./DiverAnimation";
+import FishAnimation from "./FishAnimation";
+import CreatureAnimation from "./CreatureAnimation";
+import PanelsAnimation from "./PanelsAnimation";
+import ScrollDownAnimation from "./ScrollDownAnimation";
+
+const AnimationProvider = ({ children }) => {
   const app = useRef();
   const [timeline, setTimeline] = React.useState();
 
@@ -27,7 +28,9 @@ export const AnimationProvider = ({ children }) => {
       <CreatureAnimation timeline={timeline} />
       <ParallaxAnimation timeline={timeline} />
       <PanelsAnimation />
-      <ScrollDownAnimation timeline={timeline} />
+      <ScrollDownAnimation />
     </div>
   );
 };
+
+export default memo(AnimationProvider);

@@ -1,6 +1,6 @@
-import React, { useLayoutEffect } from "react";
+import React, { memo, useLayoutEffect } from "react";
 
-export const DiverAnimation = ({ timeline }) => {
+const DiverAnimation = ({ timeline }) => {
   useLayoutEffect(() => {
     if (!timeline) return;
     timeline.to(".diver", {
@@ -26,3 +26,5 @@ export const DiverAnimation = ({ timeline }) => {
   }, [timeline]);
   return <></>;
 };
+
+export default memo(DiverAnimation);

@@ -1,6 +1,6 @@
-import React, { useLayoutEffect } from "react";
+import React, { memo, useLayoutEffect } from "react";
 
-export const FishAnimation = ({ timeline }) => {
+const FishAnimation = ({ timeline }) => {
   useLayoutEffect(() => {
     if (!timeline) return;
     timeline.to(
@@ -29,3 +29,5 @@ export const FishAnimation = ({ timeline }) => {
   }, [timeline]);
   return <></>;
 };
+
+export default memo(FishAnimation);

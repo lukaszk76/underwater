@@ -11,6 +11,7 @@
   box-shadow: 0 0 20px var(--safety-orange), 0 0 60px var(--safety-orange),
   0 0 100px var(--safety-orange);
   transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  z-index: 1000000;
 }
 
 .cursor-pointer:before {
@@ -19,4 +20,5 @@
   background: var(--safety-orange);
   opacity: 0.05;
   border-radius: 50%;
+  z-index: 1000000;
 }

@@ -51,11 +51,14 @@ export const Context = createContext({
   setTop: () => {},
   bottom: false,
   setBottom: () => {},
+  scrollProgress: 0,
+  setScrollProgress: () => {},
 });
 export const ContextProvider = ({ children }) => {
   const [section, setSection] = useState(sections.DIVING_EQUIPMENT);
   const [top, setTop] = useState(false);
   const [bottom, setBottom] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const value = {
     section,
@@ -65,6 +68,8 @@ export const ContextProvider = ({ children }) => {
     setTop,
     bottom,
     setBottom,
+    scrollProgress,
+    setScrollProgress,
   };
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };

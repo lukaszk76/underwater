@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 
-export const WaterCard = ({ children, style }) => {
+const WaterCard = ({ children, style }) => {
   useEffect(() => {
     const bubbles = document.querySelectorAll(".water-card");
     bubbles.forEach((bubble) => {
@@ -31,3 +31,5 @@ export const WaterCard = ({ children, style }) => {
     </div>
   );
 };
+
+export default memo(WaterCard);

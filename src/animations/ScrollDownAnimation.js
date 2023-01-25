@@ -1,9 +1,9 @@
-import React, { useLayoutEffect } from "react";
-
-export const ScrollDownAnimation = ({ timeline }) => {
+import React, { memo, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+const ScrollDownAnimation = () => {
   useLayoutEffect(() => {
-    if (!timeline) return;
-    timeline.to(
+    // if (!timeline) return;
+    gsap.to(
       window,
       {
         duration: 4,
@@ -12,6 +12,8 @@ export const ScrollDownAnimation = ({ timeline }) => {
       },
       1
     );
-  }, [timeline]);
+  }, []);
   return <></>;
 };
+
+export default memo(ScrollDownAnimation);

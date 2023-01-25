@@ -2,6 +2,11 @@
   font-family: 'poppins';
   src: url('../assets/Poppins-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'tech';
+  src: url('../assets/ShareTechMono-Regular.ttf');
+}
 :root {
   --background: #0c2434;
   --parallax-background: var(--rufous);

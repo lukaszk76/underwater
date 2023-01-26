@@ -1,27 +1,47 @@
 import { Context } from "./ContextProvider";
 import { gsap } from "gsap";
-import { memo, useContext, useLayoutEffect, useMemo } from "react";
+import {
+  memo,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+} from "react";
 
 export const HamburgerAnimatedIcon = memo(() => {
   const context = useContext(Context);
 
-  const displacements = useMemo(() => {
+  const generateDisplacements = useCallback(() => {
     const displacements = [];
-    for (let i = 0; i < Object.keys(context.sections).length; i++) {
+    const size = Object.keys(context.sections).length;
+    for (let i = 0; i < size; i++) {
       displacements.push(Math.floor(Math.random() * 15));
     }
     return displacements;
   }, [context.sections]);
 
-  useLayoutEffect(() => {
+  const moveLines = useCallback((displacements) => {
+    const lines = gsap.utils.toArray(".hamburger-menu-line");
+    lines.forEach((line, index) => {
+      gsap.to(line, {
+        attr: { x1: displacements[index], x2: displacements[index] + 15 },
+        duration: 1,
+        ease: "none",
+      });
+    });
+  }, []);
+
+  const getAnimation = useCallback(() => {
     const tl = gsap.timeline();
     const lines = gsap.utils.toArray(".hamburger-menu-line");
-    const animation = tl.to(lines, {
+    return tl.to(lines, {
       attr: { x1: "0", x2: "30" },
       ease: "power2",
       duration: 0.3,
     });
-    animation.reverse();
+  }, []);
+
+  const setEventListeners = useCallback((animation) => {
     const menuButton = document.querySelector(".full-screen-menu-button");
     menuButton.addEventListener("mouseenter", () => {
       animation.play();
@@ -40,11 +60,27 @@ export const HamburgerAnimatedIcon = memo(() => {
         animation.reverse();
       });
     };
-  }, [displacements, context.sections]);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      moveLines(generateDisplacements());
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [moveLines, generateDisplacements]);
+
+  useLayoutEffect(() => {
+    const animation = getAnimation();
+    animation.reverse();
+
+    return setEventListeners(animation);
+  }, [getAnimation, setEventListeners]);
 
   return (
     <div className="full-screen-menu-button hamburger-menu-icon">
-      <svg width="30px" height="30px" viewBox="0 0 30 30">
+      <svg width="30px" height="36px" viewBox="0 0 30 36">
         {Object.keys(context.sections).map((section, index) => {
           const color = context.sections[section].color;
 
@@ -52,15 +88,15 @@ export const HamburgerAnimatedIcon = memo(() => {
             <line
               className="hamburger-menu-line"
               id={`hamburger-menu-line`}
-              x1={displacements[index]}
-              y1={5 + index * 6}
-              x2={displacements[index] + 15}
-              y2={5 + index * 6}
+              x1={3 * index}
+              y1={6 + index * 7}
+              x2={3 * index + 15}
+              y2={6 + index * 7}
               strokeWidth="4"
               stroke={`var(--${color})`}
               strokeLinecap="round"
               strokeLinejoin="round"
-              key={index}
+              key={context.sections[section].short}
               style={{ position: "fixed" }}
             />
           );

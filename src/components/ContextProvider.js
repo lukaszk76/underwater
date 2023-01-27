@@ -8,6 +8,7 @@ export const sections = {
     accentColor: "safety-orange",
     textColor: "pale",
     description: "spend you vacation in the most beautiful place in the world",
+    scrollPosition: 0,
   },
   DIVING_TRIPS: {
     short: "Trips",
@@ -16,6 +17,7 @@ export const sections = {
     accentColor: "verdigris",
     textColor: "pale",
     description: "vist with us the most exciting diving places in the world",
+    scrollPosition: 0.2,
   },
   DIVING_TRAININGS: {
     short: "Trainings",
@@ -24,6 +26,7 @@ export const sections = {
     accentColor: "rufous",
     textColor: "indigo-dye",
     description: "become a professional diver with us",
+    scrollPosition: 0.4,
   },
   CUBA_VISAS: {
     short: "Visas",
@@ -32,6 +35,7 @@ export const sections = {
     accentColor: "indigo-dye",
     textColor: "pale",
     description: "we can help you with the visa to Cuba",
+    scrollPosition: 0.6,
   },
   DIVING_EQUIPMENT: {
     short: "Equipment",
@@ -40,6 +44,7 @@ export const sections = {
     accentColor: "rufous",
     textColor: "indigo-dye",
     description: "do you want to buy or rent diving equipment?",
+    scrollPosition: 0.8,
   },
 };
 
@@ -47,29 +52,14 @@ export const Context = createContext({
   section: sections.DIVING_EQUIPMENT,
   sections,
   setSection: () => {},
-  top: false,
-  setTop: () => {},
-  bottom: false,
-  setBottom: () => {},
-  scrollProgress: 0,
-  setScrollProgress: () => {},
 });
 export const ContextProvider = ({ children }) => {
   const [section, setSection] = useState(sections.DIVING_EQUIPMENT);
-  const [top, setTop] = useState(false);
-  const [bottom, setBottom] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const value = {
     section,
     sections,
     setSection,
-    top,
-    setTop,
-    bottom,
-    setBottom,
-    scrollProgress,
-    setScrollProgress,
   };
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };

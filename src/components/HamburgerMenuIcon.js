@@ -1,12 +1,6 @@
 import { Context } from "./ContextProvider";
 import { gsap } from "gsap";
-import {
-  memo,
-  useCallback,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-} from "react";
+import { memo, useCallback, useContext, useEffect } from "react";
 
 export const HamburgerAnimatedIcon = memo(() => {
   const context = useContext(Context);
@@ -31,52 +25,14 @@ export const HamburgerAnimatedIcon = memo(() => {
     });
   }, []);
 
-  const getAnimation = useCallback(() => {
-    const tl = gsap.timeline();
-    const lines = gsap.utils.toArray(".hamburger-menu-line");
-    return tl.to(lines, {
-      attr: { x1: "0", x2: "30" },
-      ease: "power2",
-      duration: 0.3,
-    });
-  }, []);
-
-  const setEventListeners = useCallback((animation) => {
-    const menuButton = document.querySelector(".full-screen-menu-button");
-    menuButton.addEventListener("mouseenter", () => {
-      animation.play();
-    });
-
-    menuButton.addEventListener("mouseleave", () => {
-      animation.reverse();
-    });
-
-    return () => {
-      menuButton.removeEventListener("mouseenter", () => {
-        animation.play();
-      });
-
-      menuButton.removeEventListener("mouseleave", () => {
-        animation.reverse();
-      });
-    };
-  }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       moveLines(generateDisplacements());
-    }, 1000);
+    }, 1500);
     return () => {
       clearInterval(interval);
     };
   }, [moveLines, generateDisplacements]);
-
-  useLayoutEffect(() => {
-    const animation = getAnimation();
-    animation.reverse();
-
-    return setEventListeners(animation);
-  }, [getAnimation, setEventListeners]);
 
   return (
     <div className="full-screen-menu-button hamburger-menu-icon">

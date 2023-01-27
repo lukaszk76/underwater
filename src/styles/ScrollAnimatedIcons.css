@@ -5,15 +5,15 @@
 }
 
 .scroll-icon-up {
-  top: 100px;
-  left: 30px;
+  top: 15px;
+  left: 63vw;
   transform: rotate(270deg);
 }
 
 .scroll-icon-down {
   transform: rotate(90deg);
   bottom: 60px;
-  left: 30px;
+  left: 63vw;
 }
 
 .scroll-svg {

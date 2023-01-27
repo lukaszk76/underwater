@@ -1,17 +1,8 @@
 import React, { useEffect, useContext, memo } from "react";
-import { Context } from "../components/ContextProvider";
 import { ScrollSvg } from "./ScrollSvg";
+import { getScrollPercentage } from "../helpers/getScrollPercentage";
 
 const ScrollAnimatedIcons = () => {
-  const context = useContext(Context);
-
-  useEffect(() => {
-    const upperIcon = document.querySelector(".scroll-icon-up");
-    const lowerIcon = document.querySelector(".scroll-icon-down");
-    upperIcon.style.opacity = context.top ? 0 : 1;
-    lowerIcon.style.opacity = context.bottom ? 0 : 1;
-  }, [context.top, context.bottom]);
-
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -19,6 +10,15 @@ const ScrollAnimatedIcons = () => {
   const scrollBottom = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const upperIcon = document.querySelector(".scroll-icon-up");
+      const lowerIcon = document.querySelector(".scroll-icon-down");
+      upperIcon.style.opacity = getScrollPercentage() <= 5 ? 0 : 1;
+      lowerIcon.style.opacity = getScrollPercentage() >= 95 ? 0 : 1;
+    });
+  }, []);
 
   return (
     <>

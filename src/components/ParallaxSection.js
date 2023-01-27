@@ -7,7 +7,7 @@ import "@lottiefiles/lottie-player";
 import water3 from "../assets/water3.mp4";
 import water1 from "../assets/water1.mp4";
 import WaterCard from "./WaterCard";
-import { Context } from "../components/ContextProvider";
+import { Context } from "./ContextProvider";
 
 const ParallaxSection = () => {
   const context = useContext(Context);
@@ -79,8 +79,8 @@ const ParallaxSection = () => {
         <img src={diver} alt="diver" className={"diver"} />
         <lottie-player
           className={"bubbles"}
-          autoplay
-          loop
+          autoplay={true}
+          loop={true}
           speed={0.5}
           intermission={0}
           mode="normal"

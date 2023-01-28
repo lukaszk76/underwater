@@ -59,7 +59,7 @@
   position: absolute;
   left: calc(0.2 * var(--backgroundWidth));
   top: -40vh;
-  transform: scale(0.55);
+  transform: scale(0.8);
   z-index: 50;
   opacity: 1;
 

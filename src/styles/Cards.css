@@ -4,19 +4,23 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  left: 66vw;
+  left: 58vw;
   top: 0;
   height: 100vh;
-  width: 170vw;
+  width: 210vw;
   overflow-y:  hidden;
   overflow-x: hidden;
 }
 
 .card {
-  width: 34vw;
+  width: 42vw;
   height: 100vh;
-  flex-basis: 34vw;
+  flex-basis: 42vw;
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  mask-image: url("/src/assets/mask.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: left;
 }
 
 .card h4 {

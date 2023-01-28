@@ -5,9 +5,9 @@ const DiverAnimation = ({ timeline }) => {
     if (!timeline) return;
     timeline.to(".diver", {
       duration: 10,
-      top: "80vh",
+      top: "95vh",
       x: "-=50",
-      transform: "scale(0.6)",
+      transform: "scale(0.85)",
       ease: "back",
     });
 

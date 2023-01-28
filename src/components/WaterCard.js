@@ -11,12 +11,12 @@ const WaterCard = ({ children, style }) => {
     e.target.querySelector(".water-card-underline").style.width = `${width}px`;
     e.target.querySelector(
       ".water-card-underline"
-    ).style.backgroundColor = `var(--${context.section.accentColor})`;
+    ).style.backgroundColor = `var(--${context.section.color})`;
     e.target.style.backgroundImage = "none";
-    e.target.style.backgroundColor = `var(--${context.section.color})`;
+    e.target.style.backgroundColor = `var(--${context.section.accentColor})`;
     e.target.querySelector(
       ".water-card-content"
-    ).style.color = `var(--${context.section.accentColor})`;
+    ).style.color = `var(--${context.section.color})`;
   };
 
   const updateBubbleOnLeave = (e) => {

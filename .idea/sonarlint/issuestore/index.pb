@@ -19,14 +19,10 @@ F
 src/components/Card.js,c/4/c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 H
 src/components/Footer.js,b/d/bd22e369de6b4e7c909c8598869bb4c2e3bc1508
-D
-src/styles/Cards.css,a/6/a641a6e85a85523f6abd02396e987bb54cbc6569
 Q
 !src/components/LearnMoreButton.js,2/9/2981bf04c4feaced3eccf31ad130df4bfeb9eb60
 H
 src/components/Cursor.js,8/d/8da99f3565db9e9e7913f9c3a9974aa7f690c682
-G
-src/styles/Parallax.css,3/1/3101e867a7be059b1add884a5d59077152f0e543
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
 <
@@ -37,24 +33,13 @@ E
 src/styles/Cursor.css,a/b/abb77de0165e739a38afdeb0b8cb33db93cf28ec
 N
 src/styles/HeaderAndFooter.css,a/a/aaecd96fe21b7ffdbead411a2f1f9dccfba930ff
-D
-src/styles/index.css,7/a/7a1236ac068ce98163901ea7ee08ea9af61a024a
 S
 #src/animations/AnimationProvider.js,e/a/eacba3121fe938dc4183f2c6072b2f9935285325
-:
-
-src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
 S
 #src/animations/CreatureAnimation.js,e/6/e6d4418697220a3454e09b83a8643f44cd2b0a32
-P
- src/animations/DiverAnimation.js,9/8/9892437c1aa94fbf2dc2e9fd03e72bb9b02c23ac
 O
 src/animations/FishAnimation.js,1/e/1ea945d541b467d13e2595197e9e32fb1ebc3707
 F
 src/components/Link.js,6/0/6027127feb8771121ace08e9e8cd691ae7921389
-S
-#src/animations/ParallaxAnimation.js,5/7/57867e7e14fa4a31dc2adc5e2b205bbc7e14a919
 K
 src/components/ScrollSvg.js,5/2/52a8bb25abb34f293797503bcd0fbf093b1a9959
-K
-src/styles/DivingParams.css,b/a/ba651328868eadcc551679680a02bcdb3dd48335

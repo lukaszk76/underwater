@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export const LearnMoreButton = ({ section }) => {
   const [variant, setVariant] = useState(1);
+  const navigate = useNavigate();
 
   const toggleVariant = useCallback(() => {
     const rectWidth = [60, 220];
@@ -39,7 +40,7 @@ export const LearnMoreButton = ({ section }) => {
   }, [section.short, toggleVariant]);
 
   const handleClick = () => {
-    console.log(`clicked learn more button ${section.short}`);
+    navigate(`/${section.short}`);
   };
 
   return (

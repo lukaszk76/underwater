@@ -29,7 +29,7 @@ export const sections = {
     scrollPosition: 0.4,
   },
   CUBA_VISAS: {
-    short: "Visas",
+    short: "cuba",
     name: "Visas to Cuba",
     color: "safety-orange",
     accentColor: "indigo-dye",

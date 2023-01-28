@@ -1,0 +1,19 @@
+.sticker-card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  box-shadow: 4px 8px 10px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sticker-card-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px;
+}

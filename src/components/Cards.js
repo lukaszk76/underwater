@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import Card from "./Card";
 import { Context } from "./ContextProvider";
 
@@ -6,17 +6,13 @@ const Cards = () => {
   const context = useContext(Context);
   return (
     <div className={"cards"}>
-      <Card section={context.sections.DIVING_CENTER} />
-
-      <Card section={context.sections.DIVING_TRIPS} />
-
-      <Card section={context.sections.DIVING_TRAININGS} />
-
-      <Card section={context.sections.CUBA_VISAS} />
-
-      <Card section={context.sections.DIVING_EQUIPMENT} />
+      {Object.keys(context.sections).map((section, index) => {
+        return (
+          <Card section={context.sections[section]} key={index} index={index} />
+        );
+      })}
     </div>
   );
 };
 
-export default Cards;
+export default memo(Cards);

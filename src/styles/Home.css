@@ -1,0 +1,6 @@
+.home {
+  height: 300vh;
+  background-image: url("/src/assets/underwater.png");
+  background-repeat: repeat;
+  background-size: cover;
+}

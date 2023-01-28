@@ -16,23 +16,23 @@ const DivingParams = () => {
 
   const updateSection = useCallback(() => {
     const scrollPercentage = getScrollPercentage();
-    const body = document.querySelector("body");
+    // const body = document.querySelector("body");
     setScrollPercentage(scrollPercentage);
     if (scrollPercentage < 20) {
       context.setSection(() => context.sections.DIVING_CENTER);
-      body.style.backgroundColor = `var(--${context.sections.DIVING_CENTER.color})`;
+      // body.style.backgroundColor = `var(--${context.sections.DIVING_CENTER.color})`;
     } else if (scrollPercentage < 40) {
       context.setSection(() => context.sections.DIVING_TRIPS);
-      body.style.backgroundColor = `var(--${context.sections.DIVING_TRIPS.color})`;
+      // body.style.backgroundColor = `var(--${context.sections.DIVING_TRIPS.color})`;
     } else if (scrollPercentage < 60) {
       context.setSection(() => context.sections.DIVING_TRAININGS);
-      body.style.backgroundColor = `var(--${context.sections.DIVING_TRAININGS.color})`;
+      // body.style.backgroundColor = `var(--${context.sections.DIVING_TRAININGS.color})`;
     } else if (scrollPercentage < 80) {
       context.setSection(() => context.sections.CUBA_VISAS);
-      body.style.backgroundColor = `var(--${context.sections.CUBA_VISAS.color})`;
+      // body.style.backgroundColor = `var(--${context.sections.CUBA_VISAS.color})`;
     } else {
       context.setSection(() => context.sections.DIVING_EQUIPMENT);
-      body.style.backgroundColor = `var(--${context.sections.DIVING_EQUIPMENT.color})`;
+      // body.style.backgroundColor = `var(--${context.sections.DIVING_EQUIPMENT.color})`;
     }
   }, []);
 

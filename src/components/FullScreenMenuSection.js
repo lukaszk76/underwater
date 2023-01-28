@@ -1,7 +1,10 @@
 import { useLayoutEffect, memo } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FullScreenMenuSection = ({ section, index }) => {
   const position = 1.2 * index * 60 + 30;
+  const navigate = useNavigate();
+
   useLayoutEffect(() => {
     const menuSectionEnd = document.querySelector(
       `.full-screen-menu-section-end-${section.short}`
@@ -53,6 +56,10 @@ const FullScreenMenuSection = ({ section, index }) => {
     };
   }, []);
 
+  function handleClick() {
+    navigate(`/${section.short}`);
+  }
+
   return (
     <div
       style={{
@@ -60,6 +67,7 @@ const FullScreenMenuSection = ({ section, index }) => {
         top: `${position}px`,
       }}
       className={`glass full-screen-menu-section full-screen-menu-section-${section.short}`}
+      onClick={handleClick}
     >
       <div
         className={`full-screen-menu-section-content full-screen-menu-section-content-${section.short}`}

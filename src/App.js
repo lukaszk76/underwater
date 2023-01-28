@@ -7,29 +7,34 @@ import "./styles/Cursor.css";
 import "./styles/ScrollAnimatedIcons.css";
 import "./styles/DivingParams.css";
 import "./styles/FullScreenMenu.css";
-import Cursor from "./components/Cursor";
-import ParallaxSection from "./components/ParallaxSection";
-import Cards from "./components/Cards";
-import Footer from "./components/Footer";
-import AnimationProvider from "./animations/AnimationProvider";
-import { ContextProvider } from "./components/ContextProvider";
-import ScrollAnimatedIcons from "./components/ScrollAnimatedIcons";
-import DivingParams from "./components/DivingParams";
-import { FullScreenMenu } from "./components/FullScreenMenu";
+import "./styles/VisasToCubaPage.css";
+import "./styles/Home.css";
+import "./styles/StickerCard.css";
+
 import { memo } from "react";
+import { Home } from "./sections/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./sections/Layout";
+import { VisasToCubaPage } from "./sections/VisasToCubaPage";
+import { ContextProvider } from "./components/ContextProvider";
 
 function App() {
   return (
     <ContextProvider>
-      <AnimationProvider>
-        <ParallaxSection />
-        <Cards />
-        <Cursor />
-        <Footer />
-        <FullScreenMenu />
-        <ScrollAnimatedIcons />
-        <DivingParams />
-      </AnimationProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="cuba" element={<VisasToCubaPage />} />
+            {/*<Route path="dashboard" element={<Dashboard />} />*/}
+
+            {/*/!* Using path="*"" means "match anything", so this route*/}
+            {/*    acts like a catch-all for URLs that we don't have explicit*/}
+            {/*    routes for. *!/*/}
+            {/*<Route path="*" element={<NoMatch />} />*/}
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ContextProvider>
   );
 }

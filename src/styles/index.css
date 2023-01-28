@@ -21,7 +21,7 @@
 
   --indigo-dye-gradient: linear-gradient(to left, var(--indigo-dye), 99.5%, var(--background));
   --rufous-gradient: linear-gradient(to left, var(--rufous), 99.5%, var(--rufous));
-  --safety-orange-gradient: linear-gradient(to left, var(--safety-orange), 99.5%, var(--buff));
+  --safety-orange-gradient: linear-gradient(-80deg, var(--safety-orange), #f39545);
   --buff-gradient: linear-gradient(to left, var(--buff), 99.5%, var(--verdigris));
   --verdigris-gradient: linear-gradient(to left, var(--verdigris), 99.5%, var(--sea));
 }
@@ -37,7 +37,16 @@ body {
   background-color: var(--background);
   color: var( --pale);
   cursor: none;
-  height: 300vh;
+}
+
+h1 {
+  position: fixed;
+  top: 0;
+  left: 42vw;
+  font-size: 3em;
+  margin: 20px;
+  padding: 20px;
+
 }
 
 h4 {

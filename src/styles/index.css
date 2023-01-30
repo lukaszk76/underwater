@@ -34,19 +34,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
+  background-image: url("/src/assets/underwater.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
   color: var( --pale);
   cursor: none;
+  overflow-x: hidden;
 }
 
 h1 {
-  position: fixed;
-  top: 0;
-  left: 42vw;
   font-size: 3em;
   margin: 20px;
   padding: 20px;
-
 }
 
 h4 {

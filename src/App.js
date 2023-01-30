@@ -9,7 +9,8 @@ import "./styles/DivingParams.css";
 import "./styles/FullScreenMenu.css";
 import "./styles/VisasToCubaPage.css";
 import "./styles/Home.css";
-import "./styles/StickerCard.css";
+import "./styles/CubaCard.css";
+import "./styles/imageCard.css";
 
 import { memo } from "react";
 import { Home } from "./sections/Home";
@@ -26,12 +27,6 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="cuba" element={<VisasToCubaPage />} />
-            {/*<Route path="dashboard" element={<Dashboard />} />*/}
-
-            {/*/!* Using path="*"" means "match anything", so this route*/}
-            {/*    acts like a catch-all for URLs that we don't have explicit*/}
-            {/*    routes for. *!/*/}
-            {/*<Route path="*" element={<NoMatch />} />*/}
           </Route>
         </Routes>
       </BrowserRouter>

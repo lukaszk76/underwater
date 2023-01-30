@@ -40,6 +40,7 @@ export const LearnMoreButton = ({ section }) => {
   }, [section.short, toggleVariant]);
 
   const handleClick = () => {
+    console.log(`/${section.short}`);
     navigate(`/${section.short}`);
   };
 

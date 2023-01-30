@@ -6,14 +6,12 @@
 
 .scroll-icon-up {
   top: 15px;
-  left: 63vw;
   transform: rotate(270deg);
 }
 
 .scroll-icon-down {
   transform: rotate(90deg);
   bottom: 60px;
-  left: 63vw;
 }
 
 .scroll-svg {

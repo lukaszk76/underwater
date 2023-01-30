@@ -30,7 +30,7 @@ export const FullScreenMenu = memo(() => {
     const menuSections = document.querySelectorAll(
       ".full-screen-menu-section "
     );
-    const parallax = document.querySelector(".parallax");
+    const parallax = document.querySelector("body");
     const menu = document.querySelector(".menu");
     const closeButton = document.querySelector("#close-button");
 

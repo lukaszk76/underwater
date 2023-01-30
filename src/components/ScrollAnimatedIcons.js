@@ -1,8 +1,8 @@
-import React, { useEffect, useContext, memo } from "react";
+import React, { useEffect, memo } from "react";
 import { ScrollSvg } from "./ScrollSvg";
 import { getScrollPercentage } from "../helpers/getScrollPercentage";
 
-const ScrollAnimatedIcons = () => {
+const ScrollAnimatedIcons = ({ left }) => {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -22,11 +22,19 @@ const ScrollAnimatedIcons = () => {
 
   return (
     <>
-      <div className="scroll-icon scroll-icon-up" onClick={scrollTop}>
+      <div
+        className="scroll-icon scroll-icon-up"
+        onClick={scrollTop}
+        style={{ left: left }}
+      >
         <ScrollSvg id="up" />
       </div>
 
-      <div className="scroll-icon scroll-icon-down" onClick={scrollBottom}>
+      <div
+        className="scroll-icon scroll-icon-down"
+        onClick={scrollBottom}
+        style={{ left: left }}
+      >
         <ScrollSvg id="down" />
       </div>
     </>

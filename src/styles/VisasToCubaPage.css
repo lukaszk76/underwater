@@ -1,18 +1,33 @@
 .visas-to-cuba-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient( farthest-corner at 40px 40px, var(--indigo-dye), 85%, var(--safety-orange) );
+}
+
+.visas-to-cuba-title {
+  position: absolute;
+  right: 10vh;
+  top: 30px;
+  z-index: 1;
+  padding: 0 50px;
+  color: var(--verdigris);
+  background-image: linear-gradient(80deg,transparent, 15%, var(--safety-orange), 85%, transparent);
+}
+
+.visas-to-cuba-page-hero {
   background-image: url("/src/assets/ghost_ship.png");
-  height: 100svh;
-  width: 100svw;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: var(--background);
 }
 
 
 .visas-to-cuba-panel {
-  position: fixed;
+  position: absolute;
   top: 0;
-  height: 100svh;
+  height: 100vh;
   width: calc((100vw - 100vh) / 2 + 12vh);
   mask-size: cover;
   mask-repeat: repeat-y;
@@ -39,10 +54,10 @@
 }
 
 .cuba-logo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  margin: 50px;
+  margin: 5vw;
   z-index: 1;
   background-image: var(--safety-orange-gradient);
 }

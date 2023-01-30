@@ -57,6 +57,7 @@ const FullScreenMenuSection = ({ section, index }) => {
   }, []);
 
   function handleClick() {
+    console.log(`/${section.short}`);
     navigate(`/${section.short}`);
   }
 

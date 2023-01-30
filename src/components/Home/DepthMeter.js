@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import GaugeChart from "react-gauge-chart";
 
 export const DepthMeter = ({ scrollPercentage }) => {

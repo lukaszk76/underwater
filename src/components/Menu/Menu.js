@@ -1,9 +1,9 @@
 import React, { memo, useCallback, useContext, useLayoutEffect } from "react";
-import { Context } from "./ContextProvider";
+import { Context } from "../ContextProvider";
 import "@lottiefiles/lottie-player";
-import FullScreenMenuSection from "./FullScreenMenuSection";
+import FullScreenMenuSection from "./MenuSection";
 
-export const FullScreenMenu = memo(() => {
+export const Menu = memo(() => {
   const context = useContext(Context);
 
   const showMenu = (show) => {

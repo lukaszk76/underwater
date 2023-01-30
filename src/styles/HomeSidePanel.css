@@ -1,0 +1,32 @@
+.home-side-panel {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  left: 58vw;
+  top: 0;
+  height: 100vh;
+  width: 42vw;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  mask-image: url("/src/assets/mask.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: left;
+  background-image: var(--equipment-gradient);
+}
+
+.home-side-panel h4 {
+  font-size: 2rem;
+}
+
+.card-content {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  margin-left: 30%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: justify;
+}

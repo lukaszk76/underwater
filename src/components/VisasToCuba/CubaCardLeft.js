@@ -1,10 +1,10 @@
 import React, { memo, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ImageCard } from "./ImageCard";
-import cuba1 from "../assets/cuba1.jpg";
-import cuba4 from "../assets/cuba4.jpg";
-import cuba5 from "../assets/cuba5.jpg";
+import { ImageCard } from "../ImageCard";
+import cuba1 from "../../assets/cuba1.jpg";
+import cuba4 from "../../assets/cuba4.jpg";
+import cuba5 from "../../assets/cuba5.jpg";
 const CubaCardLeft = () => {
   useLayoutEffect(() => {
     const card1 = document.getElementById("cuba1");

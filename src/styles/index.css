@@ -24,6 +24,12 @@
   --safety-orange-gradient: linear-gradient(-80deg, var(--safety-orange), #f39545);
   --buff-gradient: linear-gradient(to left, var(--buff), 99.5%, var(--verdigris));
   --verdigris-gradient: linear-gradient(to left, var(--verdigris), 99.5%, var(--sea));
+
+  --diving-center-gradient: linear-gradient(95deg, var(--indigo-dye), 40%, var(--background));
+  --diving-trips-gradient: linear-gradient(95deg, var(--rufous), 80%, var(--background));
+  --diving-trainings-gradient: linear-gradient(95deg, var(--buff), 80%, var(--background));
+  --cuba-gradient: linear-gradient(95deg, var(--safety-orange), 80%, var(--background));
+  --equipment-gradient: linear-gradient(95deg, var(--verdigris), 65%, var(--background));
 }
 
 body {
@@ -34,7 +40,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/src/assets/underwater.png");
+  background-color: var(--background);
   background-repeat: repeat;
   background-position: center;
   background-size: cover;

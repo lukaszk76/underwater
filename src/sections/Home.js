@@ -1,10 +1,10 @@
-import React, { useEffect, useLayoutEffect } from "react";
-import ParallaxSection from "../components/ParallaxSection";
-import Cards from "../components/Cards";
+import React, { useLayoutEffect } from "react";
+import ParallaxSection from "../components/Home/ParallaxSection";
+import HomeSidePanel from "../components/Home/HomeSidePanel";
 import Cursor from "../components/Cursor";
 import Footer from "../components/Footer";
 import ScrollAnimatedIcons from "../components/ScrollAnimatedIcons";
-import DivingParams from "../components/DivingParams";
+import DivingParams from "../components/Home/DivingParams";
 import AnimationProvider from "../animations/AnimationProvider";
 
 export const Home = () => {
@@ -16,10 +16,9 @@ export const Home = () => {
     <section className="home">
       <AnimationProvider>
         <ParallaxSection />
-        <Cards />
+        <HomeSidePanel />
         <Cursor />
         <Footer />
-        {/*<FullScreenMenu />*/}
         <ScrollAnimatedIcons left={"55vw"} />
         <DivingParams />
       </AnimationProvider>

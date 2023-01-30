@@ -1,5 +1,5 @@
 import React, { memo, useLayoutEffect, useContext } from "react";
-import { Context } from "./ContextProvider";
+import { Context } from "../ContextProvider";
 
 const WaterCard = ({ children, style }) => {
   const context = useContext(Context);

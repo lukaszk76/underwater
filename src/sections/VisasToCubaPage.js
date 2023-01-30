@@ -5,8 +5,8 @@ import Cursor from "../components/Cursor";
 import { Context } from "../components/ContextProvider";
 import { LearnMoreButton } from "../components/LearnMoreButton";
 import ScrollAnimatedIcons from "../components/ScrollAnimatedIcons";
-import CubaCardLeft from "../components/CubaCardLeft";
-import CubaCardRight from "../components/CubaCardRight";
+import CubaCardLeft from "../components/VisasToCuba/CubaCardLeft";
+import CubaCardRight from "../components/VisasToCuba/CubaCardRight";
 
 export const VisasToCubaPage = () => {
   const context = useContext(Context);

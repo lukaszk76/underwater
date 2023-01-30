@@ -6,8 +6,8 @@ import React, {
   useContext,
 } from "react";
 import { DepthMeter } from "./DepthMeter";
-import { getScrollPercentage } from "../helpers/getScrollPercentage";
-import { Context } from "./ContextProvider";
+import { getScrollPercentage } from "../../helpers/getScrollPercentage";
+import { Context } from "../ContextProvider";
 
 const DivingParams = () => {
   const context = useContext(Context);

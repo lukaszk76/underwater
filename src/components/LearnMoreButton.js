@@ -79,7 +79,7 @@ export const LearnMoreButton = ({ section }) => {
         transform="translate(130 38)"
         textAnchor="middle"
         fontSize="20"
-        fill={`var(--${section.textColor})`}
+        fill={`var(--pale)`}
       >
         LEARN MORE
       </text>

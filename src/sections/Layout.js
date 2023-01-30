@@ -1,11 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { FullScreenMenu } from "../components/FullScreenMenu";
+import { Menu } from "../components/Menu/Menu";
 
 export const Layout = () => {
   return (
     <>
-      <FullScreenMenu />
+      <Menu />
       <Outlet />
     </>
   );

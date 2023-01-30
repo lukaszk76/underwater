@@ -1,7 +1,7 @@
 import { useLayoutEffect, memo } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FullScreenMenuSection = ({ section, index }) => {
+const MenuSection = ({ section, index }) => {
   const position = 1.2 * index * 60 + 30;
   const navigate = useNavigate();
 
@@ -86,4 +86,4 @@ const FullScreenMenuSection = ({ section, index }) => {
   );
 };
 
-export default memo(FullScreenMenuSection);
+export default memo(MenuSection);

@@ -6,7 +6,6 @@ import ParallaxAnimation from "./ParallaxAnimation";
 import DiverAnimation from "./DiverAnimation";
 import FishAnimation from "./FishAnimation";
 import CreatureAnimation from "./CreatureAnimation";
-import PanelsAnimation from "./PanelsAnimation";
 import ScrollDownAnimation from "./ScrollDownAnimation";
 
 const AnimationProvider = ({ children }) => {
@@ -27,7 +26,6 @@ const AnimationProvider = ({ children }) => {
       <FishAnimation timeline={timeline} />
       <CreatureAnimation timeline={timeline} />
       <ParallaxAnimation timeline={timeline} />
-      <PanelsAnimation />
       <ScrollDownAnimation />
     </div>
   );

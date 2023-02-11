@@ -50,21 +50,28 @@ const CubaCardLeft = () => {
   }, []);
 
   return (
-    <div className={"cuba-card cuba-card-left visas-to-cuba-section"}>
-      <div className="cuba-image-gallery">
-        <ImageCard id="cuba1">
-          O Kubie Krzysztof Kolumb powiedział, że jest to najpiękniejsze miejsce
-          jakie widział.
-        </ImageCard>
-        <ImageCard id="cuba2">
-          Ernest Hemingway w Hawanie i okolicach mieszkał prawie dwadzieścia
-          lat. Dni spędzał na morzu - łowiąc ryby, a noce - w barach, pijąc
-          mojito i daiquiri.
-        </ImageCard>
-        <ImageCard id="cuba3">
-          Wim Wenders odkrył dla świata muzyków Buenavista Social Club. Z Kubą
-          związani byli Frank Sinatra oraz Gabriel Garcia Marquez.
-        </ImageCard>
+    <div
+      className={
+        "visas-to-cuba-parallax-layer cuba-card cuba-card-left visas-to-cuba-section"
+      }
+      data-speed="1.02"
+    >
+      <div className="visas-to-cuba-content">
+        <div className="cuba-image-gallery">
+          <ImageCard id="cuba1">
+            O Kubie Krzysztof Kolumb powiedział, że jest to najpiękniejsze
+            miejsce jakie widział.
+          </ImageCard>
+          <ImageCard id="cuba2">
+            Ernest Hemingway w Hawanie i okolicach mieszkał prawie dwadzieścia
+            lat. Dni spędzał na morzu - łowiąc ryby, a noce - w barach, pijąc
+            mojito i daiquiri.
+          </ImageCard>
+          <ImageCard id="cuba3">
+            Wim Wenders odkrył dla świata muzyków Buenavista Social Club. Z Kubą
+            związani byli Frank Sinatra oraz Gabriel Garcia Marquez.
+          </ImageCard>
+        </div>
       </div>
     </div>
   );

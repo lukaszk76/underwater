@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useContext, memo } from "react";
+import React, { useCallback, useEffect, memo } from "react";
 import background from "../../assets/underwater.png";
 import fish from "../../assets/fish.png";
 import creature from "../../assets/creature.png";
@@ -7,10 +7,10 @@ import "@lottiefiles/lottie-player";
 import water3 from "../../assets/water3.mp4";
 import water1 from "../../assets/water1.mp4";
 import WaterCard from "./WaterCard";
-import { Context } from "../ContextProvider";
+import { useNavigate } from "react-router-dom";
 
 const ParallaxSection = () => {
-  const context = useContext(Context);
+  const navigate = useNavigate();
 
   const getBackgroundWidth = useCallback(() => {
     const background = document.querySelector(".background-image");
@@ -39,13 +39,6 @@ const ParallaxSection = () => {
     }, 50);
   }, [getBackgroundWidth, getWidthCorrection]);
 
-  useEffect(() => {
-    const background = document.querySelector(".background");
-    background.style.setProperty(
-      "--parallax-background",
-      `var(--${context.section.color})`
-    );
-  }, [context.section]);
   return (
     <div className="parallax">
       <div className="parallax-layer background" data-speed=".2">
@@ -95,10 +88,36 @@ const ParallaxSection = () => {
         />
       </div>
       <div className="parallax-layer" data-speed="0.2">
-        <WaterCard style={{ top: "15vh", left: "47vw" }}>about us</WaterCard>
-        <WaterCard style={{ top: "27vh", left: "12vw" }}>contact</WaterCard>
-        <WaterCard style={{ top: "65vh", left: "42vw" }}>blog</WaterCard>
-        <WaterCard style={{ top: "110vh", left: "30vw" }}>events</WaterCard>
+        <WaterCard
+          style={{ top: "10vh", left: "35vw" }}
+          onClick={() => navigate("/croatia")}
+        >
+          Croatia
+        </WaterCard>
+        <WaterCard
+          style={{ top: "27vh", left: "12vw" }}
+          onClick={() => navigate("/trips")}
+        >
+          Trips
+        </WaterCard>
+        <WaterCard
+          style={{ top: "55vh", left: "40vw" }}
+          onClick={() => navigate("/school")}
+        >
+          School
+        </WaterCard>
+        <WaterCard
+          style={{ top: "70vh", left: "5vw" }}
+          onClick={() => navigate("/cuba")}
+        >
+          Cuba
+        </WaterCard>
+        <WaterCard
+          style={{ top: "110vh", left: "40vw" }}
+          onClick={() => navigate("/shop")}
+        >
+          Shop
+        </WaterCard>
       </div>
     </div>
   );

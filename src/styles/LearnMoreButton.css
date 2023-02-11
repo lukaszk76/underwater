@@ -1,8 +1,7 @@
 .learn-more-button {
   font-weight: 700;
   overflow: visible;
-  margin-bottom: 50px;
-  margin-right: 50px;
+  z-index: 100000;
 }
 
 text, rect, line, polyline {

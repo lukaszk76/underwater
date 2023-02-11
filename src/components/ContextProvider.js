@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const sections = {
   DIVING_CENTER: {
-    short: "Croatia",
+    short: "croatia",
     name: "Diving Center Croatia",
     color: "indigo-dye",
     accentColor: "safety-orange",
@@ -11,17 +11,17 @@ export const sections = {
     scrollPosition: 0,
   },
   DIVING_TRIPS: {
-    short: "Trips",
+    short: "trips",
     name: "Diving Trips",
     color: "rufous",
-    accentColor: "verdigris",
+    accentColor: "background",
     textColor: "pale",
     description: "vist with us the most exciting diving places in the world",
     scrollPosition: 0.2,
   },
   DIVING_TRAININGS: {
-    short: "Trainings",
-    name: "Diving Trainings",
+    short: "school",
+    name: "Diving School",
     color: "buff",
     accentColor: "rufous",
     textColor: "indigo-dye",
@@ -38,10 +38,10 @@ export const sections = {
     scrollPosition: 0.6,
   },
   DIVING_EQUIPMENT: {
-    short: "Equipment",
+    short: "shop",
     name: "Diving Equipment",
     color: "verdigris",
-    accentColor: "rufous",
+    accentColor: "buff",
     textColor: "indigo-dye",
     description: "do you want to buy or rent diving equipment?",
     scrollPosition: 0.8,

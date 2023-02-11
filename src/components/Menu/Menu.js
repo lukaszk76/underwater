@@ -2,6 +2,7 @@ import React, { memo, useCallback, useContext, useLayoutEffect } from "react";
 import { Context } from "../ContextProvider";
 import "@lottiefiles/lottie-player";
 import FullScreenMenuSection from "./MenuSection";
+import { ScrollSvg } from "../ScrollSvg";
 
 export const Menu = memo(() => {
   const context = useContext(Context);
@@ -30,11 +31,18 @@ export const Menu = memo(() => {
     const menuSections = document.querySelectorAll(
       ".full-screen-menu-section "
     );
-    const parallax = document.querySelector("body");
+    const parallaxLayers = document.querySelectorAll(".parallax-layer");
     const menu = document.querySelector(".menu");
     const closeButton = document.querySelector("#close-button");
+    const body = document.querySelector("body");
 
-    parallax.addEventListener("click", () => {
+    parallaxLayers.forEach((parallaxLayer) => {
+      parallaxLayer.addEventListener("mouseenter", () => {
+        showMenu(false);
+      });
+    });
+
+    body.addEventListener("click", () => {
       showMenu(false);
     });
 
@@ -67,7 +75,13 @@ export const Menu = memo(() => {
         showMenu(true);
       });
 
-      parallax.removeEventListener("click", () => {
+      parallaxLayers.forEach((parallaxLayer) => {
+        parallaxLayer.removeEventListener("mouseenter", () => {
+          showMenu(false);
+        });
+      });
+
+      body.removeEventListener("click", () => {
         showMenu(false);
       });
     };
@@ -75,7 +89,7 @@ export const Menu = memo(() => {
 
   useLayoutEffect(() => {
     return addEventListeners();
-  }, []);
+  }, [addEventListeners]);
 
   return (
     <>
@@ -91,6 +105,9 @@ export const Menu = memo(() => {
             width: "200px",
           }}
         />
+      </div>
+      <div className="menu-pointer">
+        <ScrollSvg id="menu-pointer" />
       </div>
       {Object.keys(context.sections).map((section, index) => {
         return (

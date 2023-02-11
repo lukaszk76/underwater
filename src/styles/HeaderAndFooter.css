@@ -16,6 +16,7 @@
   mask-image: url("/src/assets/logo.png");
   mask-size: contain;
   mask-repeat: no-repeat;
+  background-image: var(--cuba-gradient);
 }
 
 .main-title {
@@ -40,6 +41,7 @@
   font-size: 1rem;
   border: 0px solid transparent;
   box-shadow: none;
+  z-index: 100000;
 }
 
 .footer-content {

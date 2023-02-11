@@ -1,0 +1,28 @@
+.octopus-wrapper {
+  width: 100vw;
+}
+
+.octopus {
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+.octopus-bw {
+  z-index: 1;
+  position: relative;
+}
+
+.octopus-man,
+.octopus-dzban {
+  z-index: 3;
+  position: absolute;
+}
+
+.octopus-color {
+  position: absolute;
+  z-index: 2;
+  mask-image: url("/src/assets/octopus-maski.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: 0%;
+}

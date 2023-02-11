@@ -1,0 +1,45 @@
+.trips-page {
+  position: relative;
+  height: 500vh;
+  width: 100vw;
+  background-image: var(--trips-gradient);
+  color: var(--rufous);
+  cursor: none;
+}
+
+.trips-page__hero {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+.trips-page__hero_header {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  z-index: 1000000;
+  height: 100%;
+
+}
+
+.trips-page__hero__image {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+  object-position: center;
+  z-index: 2;
+}
+
+
+.svg-container {
+  position: absolute;
+  width: 100%;
+  top: 100vh;
+  height: 370vh;
+  overflow: hidden;
+  z-index: 0;
+}

@@ -7,11 +7,13 @@ export const DepthMeter = ({ scrollPercentage }) => {
       <GaugeChart
         id="gc"
         nrOfLevels={20}
-        arcWidth={0.085}
-        needleColor={"var(--background)"}
-        needleBaseColor={"var(--verdigris)"}
+        arcWidth={0.2}
+        needleColor={"#0c2434"}
+        colors={["#0c2434", "#a30000"]}
+        needleBaseColor={"#E6F4F1"}
+        textColor={"#0c2434"}
         percent={scrollPercentage / 100}
-        formatTextValue={() => ""}
+        formatTextValue={(value) => value + "%"}
       />
     </div>
   );

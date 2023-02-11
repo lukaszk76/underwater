@@ -25,7 +25,7 @@
 .water-card-content {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--buff);
+  color: var(--pale);
   transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .water-card-underline {
-  background-color: var(--rufous);
+  background-color: var(--safety-orange);
   width: 20px;
   height: 6px;
   border-radius: 3px;

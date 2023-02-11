@@ -1,0 +1,19 @@
+.school-page{
+  width: 100vw;
+  height: 300vh;
+  background: var(--equipment-gradient);
+  position: relative;
+}
+
+.school-page__content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.school-page__hero {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  z-index: 4;
+  height: 80vh;
+}

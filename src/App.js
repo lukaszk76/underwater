@@ -11,6 +11,11 @@ import "./styles/VisasToCubaPage.css";
 import "./styles/Home.css";
 import "./styles/CubaCard.css";
 import "./styles/ImageCard.css";
+import "./styles/Trips.css";
+import "./styles/TripsCard.css";
+import "./styles/Header.css";
+import "./styles/Octopus.css";
+import "./styles/School.css";
 
 import { memo } from "react";
 import { Home } from "./sections/Home";
@@ -18,6 +23,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./sections/Layout";
 import { VisasToCubaPage } from "./sections/VisasToCubaPage";
 import { ContextProvider } from "./components/ContextProvider";
+import Trips from "./sections/Trips";
+import School from "./sections/School";
 
 function App() {
   return (
@@ -27,6 +34,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="cuba" element={<VisasToCubaPage />} />
+            <Route path="trips" element={<Trips />} />
+            <Route path="school" element={<School />} />
+            <Route path="*" element={<Home />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,10 +1,6 @@
 .home-side-panel {
   position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  left: 58vw;
+  right: 0;
   top: 0;
   height: 100vh;
   width: 42vw;
@@ -13,18 +9,41 @@
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: left;
-  background-image: var(--equipment-gradient);
+  background-image: var(--diving-center-gradient);
+  padding-right: 5vw;
 }
 
-.home-side-panel h4 {
+.home-side-panel h4{
   font-size: 2rem;
+  width: 100%;
+}
+
+.home-side-panel-container {
+  position: relative;
+  width: 100%;
+}
+.home-side-panel-description {
+  color: var(--pale)
+}
+
+.home-side-panel-title, .home-side-panel-description {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#description2 {
+  opacity: 0;
+}
+
+#title2 {
+  opacity: 0;
 }
 
 .card-content {
-  width: 60%;
+  max-width: 60%;
   height: 100%;
   display: flex;
-  margin-left: 30%;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;

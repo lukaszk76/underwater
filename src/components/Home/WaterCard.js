@@ -1,7 +1,7 @@
 import React, { memo, useLayoutEffect, useContext } from "react";
 import { Context } from "../ContextProvider";
 
-const WaterCard = ({ children, style }) => {
+const WaterCard = ({ children, style, onClick = () => {} }) => {
   const context = useContext(Context);
 
   const updateBubbleOnEnter = (e) => {
@@ -9,14 +9,11 @@ const WaterCard = ({ children, style }) => {
       .querySelector(".water-card-content")
       .getBoundingClientRect();
     e.target.querySelector(".water-card-underline").style.width = `${width}px`;
-    e.target.querySelector(
-      ".water-card-underline"
-    ).style.backgroundColor = `var(--${context.section.color})`;
     e.target.style.backgroundImage = "none";
-    e.target.style.backgroundColor = `var(--${context.section.accentColor})`;
+    e.target.style.backgroundColor = `var(--background)`;
     e.target.querySelector(
       ".water-card-content"
-    ).style.color = `var(--${context.section.color})`;
+    ).style.color = `var(--safety-orange)`;
   };
 
   const updateBubbleOnLeave = (e) => {
@@ -24,10 +21,7 @@ const WaterCard = ({ children, style }) => {
     e.target.style.backgroundColor = "transparent";
     e.target.style.backgroundImage =
       "radial-gradient( rgba(23, 78, 99, 0.3), transparent)";
-    e.target.querySelector(".water-card-content").style.color = `var(--buff)`;
-    e.target.querySelector(
-      ".water-card-underline"
-    ).style.backgroundColor = `var(--rufous)`;
+    e.target.querySelector(".water-card-content").style.color = `var(--pale)`;
   };
   useLayoutEffect(() => {
     const bubbles = document.querySelectorAll(".water-card");
@@ -42,7 +36,7 @@ const WaterCard = ({ children, style }) => {
   }, [context.section]);
 
   return (
-    <div className={"water-card glass"} style={style}>
+    <div className={"water-card glass"} style={style} onClick={onClick}>
       <div className={"water-card-content"}>
         {children}
         <div className="water-card-underline" />

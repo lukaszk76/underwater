@@ -1,21 +1,28 @@
 .cuba-card {
-  height: 110vh;
   width: 100vw;
+  height: 100vh;
   z-index: 1;
   margin: 0;
 }
 
 .cuba-card-left {
   background-image: radial-gradient( farthest-corner at 70% 70%, var(--background), 70%, var(--sea) );
-  color: var(--background);
-}
-
-.cuba-card-right {
-  background-image: radial-gradient( farthest-corner at 40px 40px, var(--background), 80%, var(--sea) );
-  color: var(--rufous);
+  top: 90vh;
   mask-image: url("/src/assets/mask-up.png");
   mask-size: cover;
   mask-position: top;
   mask-repeat: no-repeat;
-  transform: translateY(-10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuba-card-right {
+  background-image: radial-gradient( farthest-corner at 40px 40px, var(--background), 80%, var(--sea) );
+  top: 190vh;
+  mask-image: url("/src/assets/mask-up.png");
+  mask-size: cover;
+  mask-position: top;
+  mask-repeat: no-repeat;;
 }

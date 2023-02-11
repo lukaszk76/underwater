@@ -1,0 +1,50 @@
+.header {
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 5vh;
+  gap: 3vh;
+}
+
+.header-bottom {
+  margin-bottom: 15vh;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  max-width: 20vw;
+  text-align: right;
+}
+
+.animated-logo {
+  height: 10vw;
+  width: 10vw;
+  object-fit: fill;
+  mask-image: url("/src/assets/logo.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("/src/assets/logo.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+

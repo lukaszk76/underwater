@@ -1,9 +1,11 @@
 .cuba-image-gallery {
-  padding: 50px 0px;
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .image-card-container {
@@ -20,6 +22,7 @@
   background-size: 170%;
   background-repeat: no-repeat;
   border-radius: .3em;
+  box-shadow: 2px 2px 5px #040f15;
 }
 
 .image-card {
@@ -28,9 +31,13 @@
   justify-content: space-between;
   align-items: center;
   width: 20vw;
-  min-width: 210px;
+  height: 40%;
+  min-height: 450px;
+  max-height: 550px;
+  min-width: 300px;
+  max-width: 400px;
   background-color: var(--background);
-  box-shadow: 4px 8px 16px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 50px #040f15;
 }
 
 .image-card-content {
@@ -38,8 +45,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 10px);
+  line-height: 1.7rem;
   height: 25%;
   color: var(--pale);
   padding: 10px;
+  margin: 20px;
 }

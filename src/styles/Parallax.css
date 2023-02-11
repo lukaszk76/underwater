@@ -10,7 +10,7 @@
 
 .background {
   transition: background-color 1s ease-in-out;
-  background-color: var(--parallax-background);
+  background-color: var(--background);
   display: flex;
   justify-content: center;
 }

@@ -9,27 +9,47 @@
 }
 :root {
   --background: #0c2434;
-  --parallax-background: var(--rufous);
   --sea: #174e63;
   --pale: #E6F4F1;
+  --dark-grey: #212121;
+  --light-grey: #6e6e6e;
 
-  --indigo-dye: #004777ff;
-  --rufous: #a30000ff;
-  --safety-orange: #ff7700ff;
-  --buff: #efd28dff;
-  --verdigris: #00afb5ff;
+  --indigo: #0a0614;
+  --indigo-dye: #004777;
+  --rufous: #a30000;
+  --safety-orange: #ff7700;
+  --buff: #efd28d;
+  --verdigris: #00afb5;
 
   --indigo-dye-gradient: linear-gradient(to left, var(--indigo-dye), 99.5%, var(--background));
-  --rufous-gradient: linear-gradient(to left, var(--rufous), 99.5%, var(--rufous));
+  --rufous-gradient: linear-gradient(to left, var(--rufous), 99.5%, var(--safety-orange));
   --safety-orange-gradient: linear-gradient(-80deg, var(--safety-orange), #f39545);
   --buff-gradient: linear-gradient(to left, var(--buff), 99.5%, var(--verdigris));
   --verdigris-gradient: linear-gradient(to left, var(--verdigris), 99.5%, var(--sea));
 
-  --diving-center-gradient: linear-gradient(95deg, var(--indigo-dye), 40%, var(--background));
+  --diving-center-gradient: linear-gradient(95deg, var(--background), 90%, var(--indigo-dye));
   --diving-trips-gradient: linear-gradient(95deg, var(--rufous), 80%, var(--background));
   --diving-trainings-gradient: linear-gradient(95deg, var(--buff), 80%, var(--background));
-  --cuba-gradient: linear-gradient(95deg, var(--safety-orange), 80%, var(--background));
-  --equipment-gradient: linear-gradient(95deg, var(--verdigris), 65%, var(--background));
+  --cuba-gradient: linear-gradient(95deg, var(--safety-orange), 80%, var(--rufous));
+  --equipment-gradient: linear-gradient(95deg, var(--dark-grey), 65%, var(--light-grey));
+  --grey-meter-gradient: radial-gradient( farthest-corner at 30% 30%, var(--pale), 70%, black );
+  --trips-gradient: radial-gradient( farthest-corner at 80% 30%, var(--indigo), 90%, #071f47 );
+  --trips-gradient-reversed: radial-gradient( farthest-corner at 80% 30%, #071f47, 90%, var(--indigo) );
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: auto;
 }
 
 body {
@@ -51,8 +71,6 @@ body {
 
 h1 {
   font-size: 3em;
-  margin: 20px;
-  padding: 20px;
 }
 
 h4 {

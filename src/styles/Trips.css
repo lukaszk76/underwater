@@ -12,7 +12,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 2;
+  z-index: 1;
 }
 
 .trips-page__hero_header {
@@ -21,7 +21,6 @@
   right: 10%;
   z-index: 1000000;
   height: 100%;
-
 }
 
 .trips-page__hero__image {
@@ -29,17 +28,26 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  z-index: 2;
+  z-index: -1;
+}
+
+.globe-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
 }
 
 
 .svg-container {
   position: absolute;
   width: 100%;
-  top: 100vh;
-  height: 370vh;
+  top: 80vh;
+  height: 410vh;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }

@@ -35,4 +35,8 @@
   color: var(--pale);
   filter: blur(10px);
   opacity: 0.0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }

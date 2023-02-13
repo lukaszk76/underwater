@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import google from "../../assets/pngegg.png";
 
 export const TripsCard = ({ left, top, image, text, id, title }) => {
   useLayoutEffect(() => {
@@ -59,7 +60,12 @@ export const TripsCard = ({ left, top, image, text, id, title }) => {
           left: "50vw",
         }}
       >
-        {title}
+        <img
+          src={google}
+          alt=""
+          style={{ width: "18px", height: "25px", marginRight: "10px" }}
+        />
+        <div>{title}</div>
       </div>
       <div
         style={{ top: `${top}vh`, left: initialLeft }}

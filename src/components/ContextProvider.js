@@ -16,7 +16,7 @@ export const sections = {
     color: "rufous",
     accentColor: "background",
     textColor: "pale",
-    description: "vist with us the most exciting diving places in the world",
+    description: "vist with us the most exciting diving places on the planet",
     scrollPosition: 0.2,
   },
   DIVING_TRAININGS: {

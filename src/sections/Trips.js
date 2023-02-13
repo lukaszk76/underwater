@@ -1,6 +1,6 @@
 import React, { memo, useContext, useEffect, useLayoutEffect } from "react";
 import { Context } from "../components/ContextProvider";
-import meduza from "../assets/meduza2.png";
+import stars from "../assets/stars.jpg";
 import { TripsCard } from "../components/Trips/TripsCard";
 import bajkal from "../assets/trips/bajkal.jpg";
 import barents from "../assets/trips/barents.jpg";
@@ -16,6 +16,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollAnimatedIcons from "../components/ScrollAnimatedIcons";
 import { addSmoothScroll } from "../helpers/addSmoothScroll";
+import { Globe } from "../components/Trips/Globe";
 
 const trips = [
   {
@@ -137,12 +138,13 @@ const Trips = () => {
             title={context.sections.DIVING_TRIPS.name}
             subtitle={context.sections.DIVING_TRIPS.description}
             link={"/"}
-            buttoncolor={"var(--rufous)"}
-            textcolor={"var(--rufous)"}
+            buttoncolor={"var(--light-grey)"}
+            textcolor={"var(--pale)"}
             glass
           />
         </div>
-        <img src={meduza} className="trips-page__hero__image" alt="meduza" />
+        {/*<img src={stars} className="trips-page__hero__image" alt="stars" />*/}
+        <Globe />
       </div>
 
       <div className="svg-container">

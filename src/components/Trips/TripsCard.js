@@ -3,11 +3,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import google from "../../assets/pngegg.png";
 
-export const TripsCard = ({ left, top, image, text, id, title }) => {
+export const TripsCard = ({ left, top, text, id, title }) => {
   useLayoutEffect(() => {
     const card = document.getElementById(id);
-    const image = document.getElementById(`trips-card-image-${id}`);
     const title = document.getElementById(`trips-card-title-${id}`);
+    const button = document.getElementById(`trips-card__button-${id}`);
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -29,60 +29,43 @@ export const TripsCard = ({ left, top, image, text, id, title }) => {
       0
     );
     tl.to(
-      image,
-      {
-        x: 0,
-        y: 0,
-        rotate: 0,
-        opacity: 1,
-        filter: "blur(0px)",
-      },
-      0.2
-    );
-    tl.to(
       title,
       {
         opacity: 1,
         filter: "blur(0px)",
+        ease: "power2",
       },
-      0.6
+      0.2
+    );
+    tl.to(
+      button,
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        ease: "power2",
+      },
+      1.5
     );
   }, []);
 
   const initialLeft = left < 50 ? "-10vw" : "110vw";
   return (
-    <>
-      <div
-        className={"trips-card__title"}
-        id={`trips-card-title-${id}`}
-        style={{
-          top: `calc(${top}vh + 0.5*max(40vh, 300px)`,
-          left: "50vw",
-        }}
-      >
-        <img
-          src={google}
-          alt=""
-          style={{ width: "18px", height: "25px", marginRight: "10px" }}
-        />
+    <div
+      style={{ top: `${top}vh`, left: initialLeft }}
+      className="trips-card"
+      id={id}
+    >
+      <div className={"trips-card__title"} id={`trips-card-title-${id}`}>
+        <img src={google} alt="" className={"trips-card__title__icon"} />
         <div>{title}</div>
       </div>
-      <div
-        style={{ top: `${top}vh`, left: initialLeft }}
-        className="trips-card"
-        id={id}
-      >
-        <img
-          src={image}
-          alt={id}
-          className="trips-card__image"
-          id={`trips-card-image-${id}`}
-        />
 
-        <div className="trips-card__text">
-          <div>{text}</div>
-        </div>
+      <div className="trips-card__text">
+        <div>{text}</div>
       </div>
-    </>
+      <button className="trips-card__button" id={`trips-card__button-${id}`}>
+        LEARN MORE
+      </button>
+    </div>
   );
 };

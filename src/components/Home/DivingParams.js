@@ -1,38 +1,13 @@
-import React, {
-  memo,
-  useCallback,
-  useEffect,
-  useState,
-  useContext,
-} from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import { DepthMeter } from "./DepthMeter";
 import { getScrollPercentage } from "../../helpers/getScrollPercentage";
-import { Context } from "../ContextProvider";
 
 const DivingParams = () => {
-  const context = useContext(Context);
-
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  const updateSection = useCallback(() => {
-    const scrollPercentage = getScrollPercentage();
-    setScrollPercentage(scrollPercentage);
-    if (scrollPercentage < 20) {
-      context.setSection(() => context.sections.DIVING_CENTER);
-    } else if (scrollPercentage < 40) {
-      context.setSection(() => context.sections.DIVING_TRIPS);
-    } else if (scrollPercentage < 60) {
-      context.setSection(() => context.sections.DIVING_TRAININGS);
-    } else if (scrollPercentage < 80) {
-      context.setSection(() => context.sections.CUBA_VISAS);
-    } else {
-      context.setSection(() => context.sections.DIVING_EQUIPMENT);
-    }
+  const scrollHandler = useCallback(() => {
+    setScrollPercentage(getScrollPercentage());
   }, []);
-
-  const scrollHandler = () => {
-    updateSection();
-  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -46,21 +21,18 @@ const DivingParams = () => {
   }, []);
 
   return (
-    <div className="depth-params glass">
+    <div className="depth-params glass-dark">
       <DepthMeter scrollPercentage={scrollPercentage} />
-      <div>
-        <p>
-          <span className="depth-meter__label">Pressure:</span>
-          <span className="depth-meter__value">
-            {` ${((scrollPercentage * 0.4 + 20) / 9.81).toFixed(1)} bar`}
-          </span>
-        </p>
-        <p>
-          <span className="depth-meter__label">Depth:</span>
-          <span className="depth-meter__value">
-            {` ${Math.round(scrollPercentage * 0.4 + 10)} m`}
-          </span>
-        </p>
+      <div className="depth-params-numbers">
+        <div className="depth-meter__label">Pressure:</div>
+        <div className="depth-meter__value">
+          {` ${((scrollPercentage * 0.4 + 20) / 9.81).toFixed(1)} bar`}
+        </div>
+
+        <div className="depth-meter__label">Depth:</div>
+        <div className="depth-meter__value">
+          {` ${Math.round(scrollPercentage * 0.4 + 10)} m`}
+        </div>
       </div>
     </div>
   );

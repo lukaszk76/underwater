@@ -1,20 +1,163 @@
 import React from "react";
-import GaugeChart from "react-gauge-chart";
 
 export const DepthMeter = ({ scrollPercentage }) => {
   return (
-    <div className="depth-meter">
-      <GaugeChart
-        id="gc"
-        nrOfLevels={20}
-        arcWidth={0.2}
-        needleColor={"#0c2434"}
-        colors={["#0c2434", "#a30000"]}
-        needleBaseColor={"#E6F4F1"}
-        textColor={"#0c2434"}
-        percent={scrollPercentage / 100}
-        formatTextValue={(value) => value + "%"}
+    <svg className="depth-meter" width="60" height="80" viewBox="0 0 100 200">
+      <rect
+        x="0"
+        y="0"
+        width="50"
+        height="200"
+        fill="none"
+        stroke="var(--pale)"
+        strokeWidth="3"
       />
-    </div>
+      <rect
+        x="0"
+        y={200 - scrollPercentage * 2}
+        width="50"
+        height={scrollPercentage * 2}
+        stroke="var(--pale)"
+        strokeWidth="3"
+        fill="var(--sea)"
+      />
+      <line
+        x1="60"
+        y1="2"
+        x2="70"
+        y2="2"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="100"
+        x2="70"
+        y2="100"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="198"
+        x2="70"
+        y2="198"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="20"
+        x2="65"
+        y2="20"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="40"
+        x2="65"
+        y2="40"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="60"
+        x2="65"
+        y2="60"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="80"
+        x2="65"
+        y2="80"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line
+        x1="60"
+        y1="120"
+        x2="65"
+        y2="120"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <line
+        x1="60"
+        y1="140"
+        x2="65"
+        y2="140"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <line
+        x1="60"
+        y1="160"
+        x2="65"
+        y2="160"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <line
+        x1="60"
+        y1="180"
+        x2="65"
+        y2="180"
+        strokeWidth="2"
+        stroke="var(--pale)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <text
+        transform="translate(80 15)"
+        textAnchor="start"
+        fontSize="20"
+        fill={`var(--pale)`}
+      >
+        100%
+      </text>
+      <text
+        transform="translate(80 200)"
+        textAnchor="start"
+        fontSize="20"
+        fill={`var(--pale)`}
+      >
+        0%
+      </text>
+      <text
+        transform="translate(80 105)"
+        textAnchor="start"
+        fontSize="20"
+        fill={`var(--pale)`}
+      >
+        50%
+      </text>
+    </svg>
   );
 };

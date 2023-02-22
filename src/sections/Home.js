@@ -3,7 +3,6 @@ import ParallaxSection from "../components/Home/ParallaxSection";
 import HomeSidePanel from "../components/Home/HomeSidePanel";
 import Cursor from "../components/Cursor";
 import Footer from "../components/Footer";
-import ScrollAnimatedIcons from "../components/ScrollAnimatedIcons";
 import DivingParams from "../components/Home/DivingParams";
 import AnimationProvider from "../animations/AnimationProvider";
 import { addSmoothScroll } from "../helpers/addSmoothScroll";
@@ -24,7 +23,6 @@ export const Home = () => {
         <HomeSidePanel />
         <Cursor />
         <Footer />
-        <ScrollAnimatedIcons left={"2vw"} />
         <DivingParams />
       </AnimationProvider>
     </section>

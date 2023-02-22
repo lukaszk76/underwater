@@ -1,6 +1,5 @@
 import React, { memo, useContext, useEffect, useLayoutEffect } from "react";
 import { Context } from "../components/ContextProvider";
-import stars from "../assets/stars.jpg";
 import { TripsCard } from "../components/Trips/TripsCard";
 import bajkal from "../assets/trips/bajkal.jpg";
 import barents from "../assets/trips/barents.jpg";
@@ -49,7 +48,7 @@ const trips = [
     text: "Filipiny to archipelag w południowo-wschodniej Azji, składający się z 7 107 wysp. Wyspy te są jednym z najbardziej popularnych miejsc nurkowych na świecie.",
     id: "filipiny",
     top: 230,
-    left: 65,
+    left: 75,
   },
   {
     image: kamczatka,
@@ -81,7 +80,7 @@ const trips = [
     text: "Meksyk to kraj położony w Ameryce Środkowej. Warto tu przyjechać nie tylko w celu nurkowania, ale także w celu zwiedzania.",
     id: "meksyk",
     top: 390,
-    left: 60,
+    left: 70,
   },
   {
     image: orda,
@@ -138,7 +137,7 @@ const Trips = () => {
             title={context.sections.DIVING_TRIPS.name}
             subtitle={context.sections.DIVING_TRIPS.description}
             link={"/"}
-            buttoncolor={"var(--light-grey)"}
+            buttoncolor={"var(--safety-orange)"}
             textcolor={"var(--pale)"}
             glass
           />
@@ -148,12 +147,11 @@ const Trips = () => {
       </div>
 
       <div className="svg-container">
-        <svg width="100%" height="100%" viewBox="0 0 121 1560" fill="none">
+        <svg width="100%" height="100%" viewBox="0 0 213 1568" fill="none">
           <path
-            d="M33 2C9.66663 35.8333 -21.6539 116.186 33 173.5C83.4541 226.41 125.232 249.508 116.5 318.5C109.166 362.232 102.305 355.933 83.9999 401.5C65.0494 448.674 62 471 58.5 490C53.8239 515.385 48.1847 544.51 60.9999 579C74.5288 615.41 108.323 647.161 113.5 697.5C116.279 724.525 119.062 789.136 97.4999 830.5C77.5377 868.794 47.5922 886.919 54.4999 940C60.6264 987.078 48.2092 1035.57 40.9999 1055.5C31.1966 1082.6 6.13408 1123.92 36.9999 1175.5C53.836 1203.64 97.4161 1260.58 93.9999 1321C90.578 1381.52 70.7008 1421.82 54.4999 1443.5C32.9999 1475.5 25.4999 1504.5 32.9999 1524C41.9276 1547.21 69.9999 1570 96.9999 1547.5C118.6 1529.5 110 1498.5 101 1485.5C94.4999 1474 70.4999 1469 63.4999 1488.5C57.6277 1504.86 70.9999 1511.5 74.9999 1511.5"
-            // stroke="#46a4c1"
+            d="M3.50085 0.5C1.61044 66.5314 72.696 108.282 128.001 174.5C159.382 212.074 180.222 268.597 186 306.5C191.778 344.403 190.782 363.144 179.001 402.5C164.422 451.203 157.001 472 153.501 491C148.825 516.385 143.186 545.51 156.001 580C169.53 616.41 203.324 648.161 208.501 698.5C211.28 725.525 214.063 790.136 192.501 831.5C172.539 869.794 135.519 889.329 149.501 941C161.001 983.5 139.21 1032.07 132.001 1052C122.198 1079.1 101.135 1124.92 132.001 1176.5C148.837 1204.64 162.501 1264.5 162.501 1309C162.501 1353.5 162.001 1400.5 128.001 1450.5C93.5025 1492.39 96.0008 1578 128.001 1563C135.438 1561.84 145.646 1542.62 137.501 1535.5C128.81 1527.9 121.778 1538.43 124.501 1543.5"
             stroke="var(--rufous)"
-            strokeWidth="5"
+            stroke-width="5"
           />
         </svg>
       </div>

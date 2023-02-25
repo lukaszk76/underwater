@@ -1,9 +1,16 @@
 .learn-more-button {
-  font-weight: 700;
-  overflow: visible;
-  z-index: 100000;
+  color: var(--pale);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 5px solid var(--safety-orange);
+  border-radius: 35px;
+  transition: all 0.25s ease-in-out;
+  padding: 20px 40px;
+  cursor: none;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 
-text, rect, line, polyline {
-  transition: all 0.3s ease-in-out;
+.learn-more-button:hover {
+  border: 5px solid var(--rufous);
 }

@@ -38,64 +38,13 @@ export const LearnMoreButton = ({ id, link, color }) => {
   };
 
   return (
-    <svg
-      className={`learn-more-button`}
+    <button
       id={`learn-more-button-${id}`}
-      width="220"
-      height="60"
-      viewBox="0 0 220 60"
       onClick={handleClick}
+      className="learn-more-button"
+      style={{ backgroundColor: color }}
     >
-      <rect
-        id={`learn-more-button-rect-${id}`}
-        x="0"
-        y="0"
-        width="60"
-        height="60"
-        rx="30"
-        ry="30"
-        fill={color}
-      />
-      <rect
-        x="0"
-        y="0"
-        width="220"
-        height="60"
-        rx="30"
-        ry="30"
-        fill="none"
-        stroke={color}
-        strokeWidth="2"
-      />
-      <text
-        id={`learn-more-button-text-${id}`}
-        transform="translate(130 38)"
-        textAnchor="middle"
-        fontSize="20"
-        fill={`var(--pale)`}
-      >
-        LEARN MORE
-      </text>
-      <line
-        id={`learn-more-button-line-${id}`}
-        x1="38"
-        y1="30"
-        x2="38"
-        y2="30"
-        strokeWidth="4"
-        stroke="var(--buff)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <polyline
-        id={`learn-more-button-polyline-${id}`}
-        points="27 20 38 30 27 40"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        stroke="var(--buff)"
-        strokeWidth="4"
-      ></polyline>
-    </svg>
+      learn more
+    </button>
   );
 };

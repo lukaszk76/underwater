@@ -14,7 +14,7 @@ export const TripsCard = ({ left, top, text, id, title }) => {
         trigger: card,
         start: "top 70%",
         end: "top 30%",
-        scrub: true,
+        scrub: 1,
         markers: false,
       },
     });
@@ -22,7 +22,7 @@ export const TripsCard = ({ left, top, text, id, title }) => {
       card,
       {
         opacity: 1,
-        left: `${left}vw`,
+        filter: "blur(0px)",
         y: 0,
         ease: "power2",
       },
@@ -32,10 +32,12 @@ export const TripsCard = ({ left, top, text, id, title }) => {
       title,
       {
         opacity: 1,
-        filter: "blur(0px)",
+        // filter: "blur(0px)",
         ease: "power2",
+        x: 0,
+        y: 0,
       },
-      0.2
+      0.5
     );
     tl.to(
       button,
@@ -44,14 +46,14 @@ export const TripsCard = ({ left, top, text, id, title }) => {
         filter: "blur(0px)",
         ease: "power2",
       },
-      1.5
+      0.5
     );
   }, []);
 
-  const initialLeft = left < 50 ? "-10vw" : "110vw";
+  // const initialLeft = left < 50 ? "10vw" : "80vw";
   return (
     <div
-      style={{ top: `${top}vh`, left: initialLeft }}
+      style={{ top: `${top}vh`, left: `${left}vw` }}
       className="trips-card"
       id={id}
     >

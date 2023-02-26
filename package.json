@@ -18,7 +18,9 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "three": "^0.149.0",
+    "three-msdf-text-utils": "^1.1.0",
     "troika-three-text": "^0.47.1",
+    "virtual-scroll": "^2.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

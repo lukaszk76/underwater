@@ -16,6 +16,7 @@ import Footer from "../components/Footer";
 import ScrollAnimatedIcons from "../components/ScrollAnimatedIcons";
 import { addSmoothScroll } from "../helpers/addSmoothScroll";
 import { Globe } from "../components/Trips/Globe";
+import octopus from "../assets/octopus-nobg.png";
 
 const trips = [
   {
@@ -131,6 +132,7 @@ const Trips = () => {
       <Cursor />
       <Footer />
       <ScrollAnimatedIcons left="96vw" />
+      <img src={octopus} id="octopus-trips" alt="octopus" />
       <div className="trips-page__hero">
         <div className="trips-page__hero_header">
           <Header

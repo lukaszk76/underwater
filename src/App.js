@@ -16,6 +16,7 @@ import "./styles/TripsCard.css";
 import "./styles/Header.css";
 import "./styles/Octopus.css";
 import "./styles/School.css";
+import "./styles/Croatia.css";
 
 import { memo } from "react";
 import { Home } from "./sections/Home";
@@ -25,6 +26,7 @@ import { VisasToCubaPage } from "./sections/VisasToCubaPage";
 import { ContextProvider } from "./components/ContextProvider";
 import Trips from "./sections/Trips";
 import School from "./sections/School";
+import { Croatia } from "./sections/Croatia";
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
             <Route path="cuba" element={<VisasToCubaPage />} />
             <Route path="trips" element={<Trips />} />
             <Route path="school" element={<School />} />
+            <Route path="croatia" element={<Croatia />} />
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>

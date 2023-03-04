@@ -8,7 +8,6 @@ import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 import fishFile from "../assets/small_fish.glb";
-import octopus from "../assets/octopus-nobg.png";
 import { Gradient } from "../Gradient.js";
 import Footer from "../components/Footer";
 
@@ -347,7 +346,6 @@ export const Croatia = () => {
           buttoncolor={"var(--safety-orange)"}
           textcolor={"var(--pale)"}
         />
-        <img src={octopus} id="octopus-croatia" alt="octopus" />
       </div>
     </div>
   );

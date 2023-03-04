@@ -17,6 +17,7 @@ import "./styles/Header.css";
 import "./styles/Octopus.css";
 import "./styles/School.css";
 import "./styles/Croatia.css";
+import "./styles/Shop.css";
 
 import { memo } from "react";
 import { Home } from "./sections/Home";
@@ -27,6 +28,7 @@ import { ContextProvider } from "./components/ContextProvider";
 import Trips from "./sections/Trips";
 import School from "./sections/School";
 import { Croatia } from "./sections/Croatia";
+import Shop from "./sections/Shop";
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
             <Route path="trips" element={<Trips />} />
             <Route path="school" element={<School />} />
             <Route path="croatia" element={<Croatia />} />
+            <Route path="shop" element={<Shop />} />
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>

@@ -1,0 +1,24 @@
+#shop-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+
+.shop-webgl {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header-wrapper {
+    position: absolute;
+    right: 3vw;
+    top: 5vh;
+    padding: 0 2vw;
+    border-radius: 50px;
+}

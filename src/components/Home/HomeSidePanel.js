@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import Header from "../Header";
-import octopus from "../../assets/octopus-nobg.png";
 
 const HomeSidePanel = () => {
   return (
@@ -12,7 +11,6 @@ const HomeSidePanel = () => {
         buttoncolor={"var(--safety-orange"}
         link={"/"}
       />
-      <img src={octopus} id="octopus-croatia" alt="octopus" />
     </div>
   );
 };
